@@ -1,31 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - multiply two numbers
-* @argc: number of arguments
-* @argv: arguments entered
-* Description: return product
-* Return: zero
-**/
+ *main - product of 2 numbers
+ *@argc: first parameter
+ *@argv: second parameter
+ *DESCRIPTION: outputs the product if 2 numbers
+ *Return: Always (0) Success
+ */
+
 int main(int argc, char *argv[])
 {
-int num1, num2;
-char *s1 = argv[1];
-char *s2 = argv[2];
-num1 = num2 = 0;
+int a, b, c, product;
+char error[10] = "Error";
 if (argc != 3)
 {
-printf("Error\n");
+printf("%s\n", error);
 return (1);
 }
-if (s1[0] == '-')
-num1 = -1 * atoi(&s1[1]);
-else
-num1 = atoi(&s1[0]);
-if (s2[0] == '-')
-num2 = -1 * atoi(&s2[1]);
-else
-num2 = atoi(&s2[0]);
-printf("%d\n", num1 * num2);
+for (a = 0; a < argc; a++)
+{
+b = atoi(*(argv + 1)); /**b is first number*/
+c = atoi(argv[2]); /** c is second number*/
+}
+product = b *c;
+printf("%d\n", product);
 return (0);
 }
